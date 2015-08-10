@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/mchsieh/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.5.2/7446d06ec8d4f7ffcc53f1da37c95f200dcb9387/picasso-2.5.2.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="/Users/mchsieh/android/Instagram/app/build/intermediates/pre-dexed/debug/picasso-2.5.2-48d448ada0dec17bc8ada8846700ef17ce7fdf9b.jar" />
+    </item>
+    <item
+        jar="/Users/mchsieh/.gradle/caches/modules-2/files-2.1/com.loopj.android/android-async-http/1.4.8/77bbfe240e437ecb396d982afa0d3bd4f9090ba7/android-async-http-1.4.8.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="77bbfe240e437ecb396d982afa0d3bd4f9090ba7">
+        <dex dex="/Users/mchsieh/android/Instagram/app/build/intermediates/pre-dexed/debug/android-async-http-1.4.8-20f77a713c0a50bb60caaf67664e56310c513e60.jar" />
+    </item>
+
+</items>
