@@ -1,0 +1,11 @@
+/Users/mchsieh/android/MySimpleTweets/app/build/intermediates/classes/debug
+/Users/mchsieh/android/MySimpleTweets/app/build/intermediates/pre-dexed/debug/support-annotations-22.2.1-7660ab05653d91b582ffd9516e8bd9acd138550c.jar
+/Users/mchsieh/android/MySimpleTweets/app/build/intermediates/pre-dexed/debug/codepath-utils-584d5321fdc9264fd7c85a4d272a09a4188ecd0d.jar
+/Users/mchsieh/android/MySimpleTweets/app/build/intermediates/pre-dexed/debug/codepath-oauth-0.4.1-a8509cd744b9390f9d81648408e16e6c9b21c2b0.jar
+/Users/mchsieh/android/MySimpleTweets/app/build/intermediates/pre-dexed/debug/activeandroid-3.1.0-SNAPSHOT-97f565cecfa1a5161d1a74ccbebe5da43b890fd4.jar
+/Users/mchsieh/android/MySimpleTweets/app/build/intermediates/pre-dexed/debug/scribe-codepath-0.0.3-80a44e9422b89b66367c087dd3f22a8626297adb.jar
+/Users/mchsieh/android/MySimpleTweets/app/build/intermediates/pre-dexed/debug/picasso-2.4.0-ffc2722613aa354b269f0c03c408df647d085e81.jar
+/Users/mchsieh/android/MySimpleTweets/app/build/intermediates/pre-dexed/debug/android-async-http-1.4.8-20f77a713c0a50bb60caaf67664e56310c513e60.jar
+/Users/mchsieh/android/MySimpleTweets/app/build/intermediates/pre-dexed/debug/internal_impl-22.2.1-094671ef3efd7c7d43687c9891927166f7275940.jar
+/Users/mchsieh/android/MySimpleTweets/app/build/intermediates/pre-dexed/debug/classes-c866a2b44248bcf6b0961b01b090006c84331a43.jar
+/Users/mchsieh/android/MySimpleTweets/app/build/intermediates/pre-dexed/debug/classes-829ab6252c02497f71840a3ecccfe626d0999219.jar
