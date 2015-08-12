@@ -37,11 +37,11 @@ The following **bonus** features are implemented:
 The following **additional** features are implemented:
 
 * [x] List anything else that you can get done to improve the app functionality!
-  *[x] User can **select "reply" on the timeline to respond to a tweet directly**
-  *[x] User can **select "retweet" on the timeline to retweet to a tweet directly**
-  *[x] User can **select "favorite" and "unfavorite" on the timeline to favoite a tweet directly**
-  *[x] User can see **Counters of "retweet" and "favorite"**
-  *[x] User can **click a “Refresh” icon to refresh timeline** in the Action Bar on the top right
+  * [x] User can **select "reply" on the timeline to respond to a tweet directly**
+  * [x] User can **select "retweet" on the timeline to retweet to a tweet directly**
+  * [x] User can **select "favorite" and "unfavorite" on the timeline to favoite a tweet directly**
+  * [x] User can see **Counters of "retweet" and "favorite"**
+  * [x] User can **click a “Refresh” icon to refresh timeline** in the Action Bar on the top right
 
 ## Video Walkthrough 
 
