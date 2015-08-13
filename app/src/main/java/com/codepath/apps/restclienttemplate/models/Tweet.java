@@ -21,44 +21,21 @@ public class Tweet {
     private int retweet_count;
     private int favorite_count;
     private boolean favorited;
-
-    public void setRetweeted(boolean retweeted) {
-        this.retweeted = retweeted;
-    }
-
-    public void setFavorited(boolean favorited) {
-        this.favorited = favorited;
-    }
-
     private boolean retweeted;
-
-    public boolean isRetweeted() {
-        return retweeted;
-    }
-
-    public boolean isFavorited() {
-        return favorited;
-    }
-
-    public int getRetweet_count() {
-        return retweet_count;
-    }
-
-    public int getFavorite_count() {
-        return favorite_count;
-    }
 
 
     public long getUid() {return uid;}
-    public User getUser() {
-        return user;
-    }
+    public User getUser() {return user;}
     public String getBody() { return body;}
     public String getCreated_at() {return created_at;}
     public String getMedia_url() { return media_url;}
-    public int getFavoriteCount() {return favorite_count;}
     public int getRetweetCount() {return retweet_count;}
+    public int getFavoriteCount() {return favorite_count;}
+    public boolean isRetweeted() {return retweeted;}
+    public boolean isFavorited() {return favorited;}
 
+    public void setRetweeted(boolean retweeted) {this.retweeted = retweeted;}
+    public void setFavorited(boolean favorited) {this.favorited = favorited;}
 
     public static Tweet fromJSON(JSONObject jsonObject) throws JSONException {
         Tweet tweet = new Tweet();

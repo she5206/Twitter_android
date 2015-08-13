@@ -136,15 +136,20 @@ public class TimelineActivity extends ActionBarActivity {
     }
 
     public void showReplyPage(View view) {
+
         int position = getIntent().getIntExtra("position", 0);
         Tweet tweet = tweets.get(position);
         Intent i = new Intent(this, ReplyActivity.class);
+        Log.d("dddddd",String.valueOf(position));
+        Log.d("dddddd",tweet.getUser().getName());
         i.putExtra("uid", tweet.getUid());
         i.putExtra("profile_image_url",LoginActivity.currentUser.getProfile_img_url());
         i.putExtra("name", tweet.getUser().getName());
         i.putExtra("screenName", tweet.getUser().getScreen_name());
         startActivityForResult(i,REQUEST_CODE);
     }
+
+
 
     private static int retweet_counter=0;
     public void onRetweetClicked(View view) {

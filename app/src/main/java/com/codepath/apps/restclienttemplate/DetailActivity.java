@@ -40,6 +40,11 @@ public class DetailActivity extends ActionBarActivity {
         TextView tvCreatedAt = (TextView)findViewById(R.id.tvCreatedAt);
         ImageView ivMedia = (ImageView)findViewById(R.id.ivMedia);
         ImageButton ibReplay = (ImageButton)findViewById(R.id.ibtReply);
+        ImageButton ibRetweet = (ImageButton)findViewById(R.id.ibRetweet);
+        TextView tvRetweetCount = (TextView)findViewById(R.id.tvRetweetCount);
+        ImageButton ibFavorite = (ImageButton)findViewById(R.id.ibFavorite);
+        TextView tvFavoriteCount = (TextView)findViewById(R.id.tvFavoriteCount);
+
         // set value into object
         // name
         tvName.setText(tweet.getUser().getName());
@@ -60,8 +65,6 @@ public class DetailActivity extends ActionBarActivity {
         sdf.setTimeZone(TimeZone.getTimeZone("GMT+8")); // give a timezone reference for formating (see comment at the bottom
         String DateToStr = sdf.format(date);
         tvCreatedAt.setText(DateToStr);
-        // reply button
-        ibReplay.setImageResource(R.drawable.reply);
 
         // media
         ivMedia.setImageResource(android.R.color.transparent);  // clear image view
@@ -74,6 +77,31 @@ public class DetailActivity extends ActionBarActivity {
             ivMedia.setMaxHeight(0);
         }
 
+        // reply button
+        ibReplay.setImageResource(android.R.color.transparent);
+        ibReplay.setImageResource(R.drawable.reply_before);
+
+        // retweet button
+        ibRetweet.setImageResource(android.R.color.transparent);
+        if(!tweet.isRetweeted()) {
+            ibRetweet.setImageResource(R.drawable.retweet_before);
+        }else{
+            ibRetweet.setImageResource(R.drawable.retweet_after);
+        }
+
+        // retweet count
+        tvRetweetCount.setText(String.valueOf(tweet.getRetweetCount()));
+
+        // favorite button
+        ibFavorite.setImageResource(android.R.color.transparent);
+        if(!tweet.isFavorited()) {
+            ibFavorite.setImageResource(R.drawable.favorite_before);
+        }else{
+            ibFavorite.setImageResource(R.drawable.favorite_after);
+        }
+
+        // favorite count
+        tvFavoriteCount.setText(String.valueOf(tweet.getFavoriteCount()));
     }
 
     @Override

@@ -89,6 +89,20 @@ public class TweetsArrayAdapter extends ArrayAdapter{
         // imagebutton - reply
         ibReplay.setImageResource(android.R.color.transparent);
         ibReplay.setImageResource(R.drawable.reply_before);
+        ibReplay.setTag(position);
+        ibReplay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Tweet tweet  = TimelineActivity.tweets.get(Integer.parseInt(v.getTag().toString()));
+                Context context = getContext();
+                Intent i = new Intent(context, ReplyActivity.class);
+                i.putExtra("uid", tweet.getUid());
+                i.putExtra("profile_image_url", LoginActivity.currentUser.getProfile_img_url());
+                i.putExtra("name", tweet.getUser().getName());
+                i.putExtra("screenName", tweet.getUser().getScreen_name());
+                ((Activity) context).startActivityForResult(i, REQUEST_CODE);
+            }
+        });
 
         // imagebutton - retweet
         ibRetweet.setImageResource(android.R.color.transparent);

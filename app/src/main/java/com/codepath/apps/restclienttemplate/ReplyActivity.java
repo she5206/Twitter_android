@@ -2,6 +2,10 @@ package com.codepath.apps.restclienttemplate;
 
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.internal.view.menu.ActionMenuItemView;
+import android.text.Editable;
+import android.text.InputFilter;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -22,12 +26,12 @@ import static com.activeandroid.Cache.getContext;
 public class ReplyActivity extends ActionBarActivity {
     private TwitterClient client;
     private EditText edReplyContent;
+    private Menu menu;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reply);
         client = TwitterApplication.getRestClient();
-
         // get object
         ImageView ivProfileImage = (ImageView)findViewById(R.id.ivProfileImage);
         TextView tvReplyToWho = (TextView)findViewById(R.id.tvReplyToWho);
@@ -42,9 +46,29 @@ public class ReplyActivity extends ActionBarActivity {
         // text reply to who
         tvReplyToWho.setText("Reply to "+getIntent().getStringExtra("name"));
         // edit text reply content
-        edReplyContent.setText("@"+getIntent().getStringExtra("screenName")+" ");
+        edReplyContent.setText("@" + getIntent().getStringExtra("screenName") + " ");
         edReplyContent.setSelection(edReplyContent.length());
 
+        // Post Content
+        // 1. set Filter to 140 characters
+        InputFilter[] filters = new InputFilter[1];
+        filters[0] = new InputFilter.LengthFilter(140);
+        edReplyContent.setFilters(filters);
+        // 2. Words Counter
+        edReplyContent.addTextChangedListener(new TextWatcher() {
+            public void afterTextChanged(Editable s) {
+
+            }
+
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                int length = 140 - edReplyContent.getText().length();
+                ActionMenuItemView ivWords = (ActionMenuItemView) findViewById(R.id.action_words);
+                ivWords.setText(String.valueOf(length));
+            }
+        });
     }
 
     @Override
@@ -52,6 +76,15 @@ public class ReplyActivity extends ActionBarActivity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_reply, menu);
         return true;
+    }
+
+    @Override
+    public boolean onPrepareOptionsMenu(Menu menu) {
+        MenuItem settingsItem = menu.findItem(R.id.action_words);
+        int length = 140 - edReplyContent.getText().length();
+        settingsItem.setTitle(String.valueOf(length));
+
+        return super.onPrepareOptionsMenu(menu);
     }
 
     @Override
